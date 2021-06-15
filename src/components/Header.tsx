@@ -1,0 +1,17 @@
+type propTypeHeader = {
+    selectedGenre: GenreResponseProps;
+}
+
+interface GenreResponseProps {
+    id: number;
+    name: 'action' | 'comedy' | 'documentary' | 'drama' | 'horror' | 'family';
+    title: string;
+}
+
+export function Header(props: propTypeHeader){
+    return (
+        <header>
+            <span className="category">Categoria:<span> {props.selectedGenre.title}</span></span>
+        </header>
+    )
+}
