@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 
-import { Header } from './components/Header';
 import { SideBar } from './components/SideBar';
 import { Content } from './components/Content';
 
@@ -60,8 +59,7 @@ export function App() {
       <div style={{ display: 'flex', flexDirection: 'row' }}>
         <SideBar genresList={genres} selectedGenreId={selectedGenreId} handleClickButton={handleClickButton}/>
         <div className="container">
-          <Header selectedGenre={selectedGenre} />
-          <Content movies={movies} />
+          <Content movies={movies} selectedGenre={selectedGenre} />
         </div>
       </div>
     )
